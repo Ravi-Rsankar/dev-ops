@@ -65,3 +65,24 @@ docker stop test
 docker ps -f "status=exited"
 ```
 
+##### Docker pull command
+```
+docker pull module_name
+```
+
+##### Docker tag 
+```
+docker tag Source_Image[:tag] Target_Image[:tag]
+```
+
+##### Docker push
+```
+docker push Name[:tag]
+```
+
+##### Remove all unused Images, Containers
+```
+docker system prune  
+docker system prune -a  
+```
+
