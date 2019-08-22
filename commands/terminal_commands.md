@@ -1,6 +1,7 @@
 # Docker commands
 
-Initialize a swarm 
+###### Initialize a swarm 
 ```
-swarm init --advertise-addr 172.18.160.84
+swarm init --advertise-addr localhost
 ```
+
