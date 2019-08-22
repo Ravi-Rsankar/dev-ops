@@ -23,9 +23,11 @@ docker container stop registry_name && docker container rm -v registry_name
 
 ##### Docker build
 ```
-docker build .
+docker build [Options] [Path] 
 ```
-The . represents the path where to build  
+The '.' represents the path where to build
+Options:-t - name and optionally a tag in name:tag format  
+        -f - Name of the dockerfile(if name other than Dockerfile)
 
 ##### Run the docker image
 ```
@@ -47,7 +49,19 @@ docker ps
 docker images
 ```
 
+##### Remove the docker images
+```
+docker rmi image_name
+```
+Use -f for force remove  
+
 ##### Stop the docker container
 ```
 docker stop test
 ```
+
+##### List all exited containers
+```
+docker ps -f "status=exited"
+```
+
