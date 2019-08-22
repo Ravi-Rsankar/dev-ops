@@ -46,3 +46,8 @@ docker ps
 ```
 docker images
 ```
+
+##### Stop the docker container
+```
+docker stop test
+```
