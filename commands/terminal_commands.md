@@ -53,7 +53,7 @@ docker images
 
 ##### Remove the docker images
 ```
-docker rmi image_name
+docker rmi [options] image_name
 ```
 *Use -f for force remove*  
 
@@ -92,6 +92,6 @@ docker system prune -a
 ```
 docker service ls [options]
 
-*-f : filter
--q : display only ids*
 ```
+*-f : filter  
+-q : display only ids*
