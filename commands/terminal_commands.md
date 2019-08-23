@@ -86,3 +86,10 @@ docker system prune
 docker system prune -a  
 ```
 
+##### List services
+```
+docker service ls [options]
+
+-f : filter
+-q : display only ids
+```
