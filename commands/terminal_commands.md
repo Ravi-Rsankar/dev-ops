@@ -88,6 +88,16 @@ docker system prune
 docker system prune -a  
 ```
 
+##### Remove dangling images
+```
+docker image prune [options]
+```
+*-a: remove all*  
+remove all images that are created more than 12 hours ago
+```
+docker image prune -a --filter "until=12h"
+```
+
 ##### List services
 ```
 docker service ls [options]
