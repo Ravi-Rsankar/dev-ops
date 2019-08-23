@@ -27,8 +27,9 @@ docker build [Options] [Path]
 ```
 The '.' represents the path where to build  
 
-*Options:-t - name and optionally a tag in name:tag format  
-        -f - Name of the dockerfile(if name other than Dockerfile)*
+*Options*:  
+        -t - name and optionally a tag in name:tag format  
+        -f - Name of the dockerfile(if name other than Dockerfile)
 
 ##### Run the docker image
 ```
@@ -54,7 +55,7 @@ docker images
 ```
 docker rmi image_name
 ```
-Use -f for force remove  
+*Use -f for force remove*  
 
 ##### Stop the docker container
 ```
@@ -91,6 +92,6 @@ docker system prune -a
 ```
 docker service ls [options]
 
--f : filter
--q : display only ids
+*-f : filter
+-q : display only ids*
 ```
