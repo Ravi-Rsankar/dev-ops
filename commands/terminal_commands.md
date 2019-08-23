@@ -27,8 +27,8 @@ docker build [Options] [Path]
 ```
 The '.' represents the path where to build  
 
-**Options:-t - name and optionally a tag in name:tag format  
-        -f - Name of the dockerfile(if name other than Dockerfile)
+*Options:-t - name and optionally a tag in name:tag format  
+        -f - Name of the dockerfile(if name other than Dockerfile)*
 
 ##### Run the docker image
 ```
