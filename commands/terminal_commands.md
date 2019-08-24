@@ -104,4 +104,11 @@ docker service ls [options]
 
 ```
 *-f : filter  
--q : display only ids*
+-q : display only ids*  
+
+##### Login to the container
+```
+docker exec -it container_id /bin/bash
+```
+
+
