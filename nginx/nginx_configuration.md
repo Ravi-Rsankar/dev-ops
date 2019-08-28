@@ -36,3 +36,11 @@ build the docker image
 
 #### run_service.sh
 Create the docker service and publish it to the 80 port
+
+#### Nginx Commands
+
+Test the configuration
+```
+sudo nginx -t
+```
+
