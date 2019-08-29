@@ -44,3 +44,18 @@ Test the configuration
 sudo nginx -t
 ```
 
+## Other settings
+### To download a file by exposing the path 
+In the nginx.conf file provide the root path at the 'root' variable udnder the server section.  
+```
+root /home/ubuntu/src/ui
+```
+
+Provide a location for '/' which will have an empty body. Whenever a request is received at this location it will direct to the root.  
+```
+location / {}
+```
+
+Now to access the file, navigate the url till the file in the browser.  
+Eg: In the browser, say if the file is under /home/ubuntu/src/ui/image/image.tar.  
+Provide this complete link in the browser to access the file
