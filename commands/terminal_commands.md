@@ -122,3 +122,11 @@ docker service create nginx
 docker service rm service_name
 ```
 
+##### Save Image as tar
+```
+docker save imageName > imagename.tar
+```
+You can also save a particular tag using imagename:tag  
+
+
+
