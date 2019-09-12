@@ -53,7 +53,9 @@ root /home/ubuntu/src/ui
 
 Provide a location for '/' which will have an empty body. Whenever a request is received at this location it will direct to the root.  
 ```
-location / {}
+location ~ \.(zip) {
+        root /var/www/html/share;
+    }
 ```
 
 Now to access the file, navigate the url till the file in the browser.  
