@@ -114,7 +114,7 @@ docker exec -it container_id /bin/bash
 ##### Create a service
 To create a single replica with no configuration, suppply the image name alone. this command starts nginx with no published port
 ```
-docker service create nginx
+docker service create --name any_name image_name:tag
 ```
 
 ##### Remove a service 
