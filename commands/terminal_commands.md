@@ -117,7 +117,7 @@ To create a single replica with no configuration, suppply the image name alone. 
 docker service create --name any_name image_name:tag
 ```
 
-##### Remove a service 
+##### Remove / stop a service 
 ```
 docker service rm service_name
 ```
