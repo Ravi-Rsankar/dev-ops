@@ -98,6 +98,12 @@ remove all images that are created more than 12 hours ago
 docker image prune -a --filter "until=12h"
 ```
 
+##### publish service on a port
+```
+docker service create --name service_name --publish published=1883,target=1883 image_id
+
+```
+
 ##### List services
 ```
 docker service ls [options]
