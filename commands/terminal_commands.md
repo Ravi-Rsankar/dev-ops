@@ -11,85 +11,85 @@ The '.' represents the path where to build
         -f - Name of the dockerfile(if name other than Dockerfile)
 
 
-##### Run the docker image
+#### Run the docker image
 ```
 docker run --name some_name image_id
 ```
 
-##### Remove a container
+#### Remove a container
 ```
 docker rm name
 ```
 
-##### View all running containers
+#### View all running containers
 ```
 docker ps
 ```
 
-##### List all the images
+#### List all the images
 ```
 docker images
 ```
 
-##### Remove the docker images
+#### Remove the docker images
 ```
 docker rmi [options] image_name
 ```
 *Use -f for force remove*  
 
-##### Initialize a swarm 
+#### Initialize a swarm 
 ```
 swarm init --advertise-addr localhost
 ```
 
-##### Create a registry  
+#### Create a registry  
 This creates a registry without TLS
 ```
 docker run -d -p 5000:5000 --restart=always --name registry_name registry:2
 ```
 
-##### Stop registry
+#### Stop registry
 ```
 docker container stop registry_name
 ```
 
-##### To remove the container, use docker container rm
+#### To remove the container, use docker container rm
 ```
 docker container stop registry_name && docker container rm -v registry_name
 ```
 
-##### Stop the docker container
+#### Stop the docker container
 ```
 docker stop test
 ```
 
-##### List all exited containers
+#### List all exited containers
 ```
 docker ps -f "status=exited"
 ```
 
-##### Docker pull command
+#### Docker pull command
 ```
 docker pull module_name
 ```
 
-##### Docker tag 
+#### Docker tag 
 ```
 docker tag Source_Image[:tag] Target_Image[:tag]
 ```
 
-##### Docker push
+#### Docker push
 ```
 docker push Name[:tag]
 ```
 
-##### Remove all unused Images, Containers
+#### Remove all unused Images, Containers
 ```
 docker system prune  
 docker system prune -a  
 ```
 
-##### Remove dangling images
+#### Remove dangling images
 ```
 docker image prune [options]
 ```
@@ -99,13 +99,13 @@ remove all images that are created more than 12 hours ago
 docker image prune -a --filter "until=12h"
 ```
 
-##### publish service on a port
+#### publish service on a port
 ```
 docker service create --name service_name --publish published=1883,target=1883 image_id
 
 ```
 
-##### List services
+#### List services
 ```
 docker service ls [options]
 
@@ -113,33 +113,37 @@ docker service ls [options]
 *-f : filter  
 -q : display only ids*  
 
-##### Login to the container
+#### Login to the container
 ```
 docker exec -it container_id /bin/bash
 ```
 
-##### Create a service
+#### Create a service
 To create a single replica with no configuration, suppply the image name alone. this command starts nginx with no published port
 ```
 docker service create --name any_name image_name:tag
 ```
 
-##### Remove / stop a service 
+#### Remove / stop a service 
 ```
 docker service rm service_name
 ```
 
-##### Save Image as tar
+#### Save Image as tar
 ```
 docker save imageName > imagename.tar
 ```
 You can also save a particular tag using imagename:tag  
 
-##### Visualize docker disc space usage
+#### Visualize docker disc space usage
 ```
 docker system df
 ```
 
+#### Size of docker container
+```
+docker ps --size
+```
 
 
 
