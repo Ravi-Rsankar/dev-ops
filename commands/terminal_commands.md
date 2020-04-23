@@ -166,4 +166,7 @@ OPTION: --force
 ```
 If the node is a manager then force leave
 
-
+#### Swarm status
+```
+docker info
+```
