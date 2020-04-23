@@ -145,10 +145,11 @@ docker ps --size
 ```
 swarm init --advertise-addr localhost
 ```
-#### Get the worker token for a swarm
+#### Manage join tokens
 ```
 docker swarm join-token worker
 ```
+Join tokens are secrets used to join to a swarm. two types of token: worker and manager
 #### Join worker node to the swarm
 ```
 docker swarm join \
