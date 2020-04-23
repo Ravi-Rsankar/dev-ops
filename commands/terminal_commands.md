@@ -139,12 +139,31 @@ docker system df
 ```
 docker ps --size
 ```
-### Swarm Cluster 
+## Swarm Cluster 
 
 #### Initialize a swarm 
 ```
 swarm init --advertise-addr localhost
 ```
-
+#### Get the worker token for a swarm
+```
+docker swarm join-token worker
+```
+#### Join worker node to the swarm
+```
+docker swarm join \
+    --token SWMTKN-1-49nj1cmql0jkz5s954yi3oex3nedyz0fb0xx14ie39trti4wxv-8vxv8rssmk743ojnwacrr2e7c \
+    192.168.99.100:2377
+```
+#### List the docker nodes in swarm
+```
+docker node ls
+```
+#### Leave a swarm
+```
+docker swarm leave [OPTIONS]
+OPTION: --force
+```
+If the node is a manager then force leave
 
 
