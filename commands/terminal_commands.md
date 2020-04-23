@@ -37,11 +37,6 @@ docker rmi [options] image_name
 ```
 *Use -f for force remove*  
 
-#### Initialize a swarm 
-```
-swarm init --advertise-addr localhost
-```
-
 #### Create a registry  
 This creates a registry without TLS
 ```
@@ -143,6 +138,12 @@ docker system df
 #### Size of docker container
 ```
 docker ps --size
+```
+### Swarm Cluster 
+
+#### Initialize a swarm 
+```
+swarm init --advertise-addr localhost
 ```
 
 
