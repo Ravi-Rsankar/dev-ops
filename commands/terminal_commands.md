@@ -145,6 +145,7 @@ docker ps --size
 ```
 docker swarm init --advertise-addr localhost
 ```
+The docker engine targeted by this command becomes a manager in the newly created single-node swarm.
 #### Manage join tokens
 ```
 docker swarm join-token worker
