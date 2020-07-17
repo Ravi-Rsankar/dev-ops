@@ -139,37 +139,3 @@ docker system df
 ```
 docker ps --size
 ```
-## Swarm Cluster 
-
-#### Initialize a swarm 
-```
-docker swarm init --advertise-addr localhost
-```
-The docker engine targeted by this command becomes a manager in the newly created single-node swarm.
-#### Manage join tokens
-```
-docker swarm join-token worker
-```
-Join tokens are secrets used to join to a swarm. two types of token: worker and manager
-#### Join worker node to the swarm
-```
-docker swarm join \
-    --token SWMTKN-1-49nj1cmql0jkz5s954yi3oex3nedyz0fb0xx14ie39trti4wxv-8vxv8rssmk743ojnwacrr2e7c \
-    192.168.99.100:2377
-```
-When joining a worker to a manager check if all the docker ports are opened. Also allow them through the firewall if necessary
-#### List the docker nodes in swarm
-```
-docker node ls
-```
-#### Leave a swarm
-```
-docker swarm leave [OPTIONS]
-OPTION: --force
-```
-If the node is a manager then force leave
-
-#### Swarm status
-```
-docker info
-```
