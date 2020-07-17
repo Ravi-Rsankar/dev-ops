@@ -143,7 +143,7 @@ docker ps --size
 
 #### Initialize a swarm 
 ```
-swarm init --advertise-addr localhost
+docker swarm init --advertise-addr localhost
 ```
 #### Manage join tokens
 ```
