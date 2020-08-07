@@ -130,6 +130,12 @@ docker save imageName > imagename.tar
 ```
 You can also save a particular tag using imagename:tag  
 
+#### Load image tar 
+
+```
+docker load --input imagename.tar
+```
+
 #### Visualize docker disc space usage
 ```
 docker system df
