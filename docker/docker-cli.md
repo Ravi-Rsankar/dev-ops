@@ -1,6 +1,7 @@
 # Docker commands
 
-##### Docker build
+#### Docker build
+
 ```
 docker build [Options] [Path] 
 ```
@@ -37,7 +38,46 @@ docker rmi [options] image_name
 ```
 *Use -f for force remove*  
 
+#### List all Volumes
+
+```
+docker volume ls
+```
+
+#### List dangling volumes
+
+```
+docker volume ls -qf dangling=true
+```
+
+#### Remove all dangling volumes
+
+```
+docker volume rm $(docker volume ls -qf dangling=true)
+```
+
+#### Remove all unused Images, Containers
+
+```
+docker system prune  
+docker system prune -a  
+```
+
+#### Remove dangling images
+
+```
+docker image prune [options]
+```
+
+*-a: remove all*  
+remove all images that are created more than 12 hours ago
+
+```
+docker image prune -a --filter "until=12h"
+```
+
 #### Create a registry  
+
 This creates a registry without TLS
 ```
 docker run -d -p 5000:5000 --restart=always --name registry_name registry:2
@@ -76,22 +116,6 @@ docker tag Source_Image[:tag] Target_Image[:tag]
 #### Docker push
 ```
 docker push Name[:tag]
-```
-
-#### Remove all unused Images, Containers
-```
-docker system prune  
-docker system prune -a  
-```
-
-#### Remove dangling images
-```
-docker image prune [options]
-```
-*-a: remove all*  
-remove all images that are created more than 12 hours ago
-```
-docker image prune -a --filter "until=12h"
 ```
 
 #### publish service on a port
